@@ -30,7 +30,7 @@
     .banner {
       width: 100%;
       height: 240px;
-      background: url('banner.png') no-repeat center center;
+      background: url('https://i.postimg.cc/65xS857g/banner.png') no-repeat center center;
       background-size: cover;
     }
 
@@ -40,7 +40,7 @@
       border-radius: 50%;
       border: 4px solid #ff0077;
       margin-top: -60px;
-      background: url('foto3.') no-repeat center center;
+      background: url('https://i.postimg.cc/GtLRjyn9/foto-3.jpg') no-repeat center center;
       background-size: cover;
     }
 
@@ -65,7 +65,7 @@
     .telegram-btn {
       background-color: #0088cc;
       color: #fff;
-      padding: 12px 24px;
+      padding: 13px 24px;
       border: none;
       border-radius: 30px;
       font-size: 15px;
@@ -93,7 +93,7 @@
       gap: 8px;
       font-size: 15px;
       color: #ccc;
-     margin: 30px;
+      margin: 30px;
       justify-content: center;
       animation: fadeIn 1s ease;
     }
@@ -262,115 +262,26 @@
     <div class="carousel-container">
       <div class="carousel">
         <img src="foto1.png" alt="Foto provocante 1">
-        <img src="https://i.postimg.cc/qRPSZddS/foto2.png" alt="Foto provocante 2">
+        <img src="foto2.PNG" alt="Foto provocante 2">
         <img src="foto3.PNG" alt="Foto provocante 3">
-        <img src="https://i.postimg.cc/dt1Nm1d3/foto5.png" alt="Foto provocante 3">
+        <img src="foto5.PNG" alt="Foto provocante 3">
       </div>
     </div>
 
-    <div class="audio-whatsapp">
-  <button class="audio-play-btn" onclick="tocarAudioWhats()">
-    <span id="iconeBotaoWhats">&#9658;</span>
+     <!-- Player 1 -->
+
+<div class="audio-whatsapp">
+  <button class="audio-play-btn" onclick="tocarAudio(1)">
+    <span id="iconeBotaoWhats1">&#9658;</span>
   </button>
   <div class="audio-progress-container">
     <div class="audio-barra">
-      <div id="audioBarraProgressoWhats"></div>
+      <div id="audioBarraProgressoWhats1"></div>
     </div>
-    <span id="audioTempoWhats">0:00</span>
+    <span id="audioTempoWhats1">0:00</span>
   </div>
-  <audio id="meuAudioWhats" src="audio1.mp3"></audio>
+  <audio id="meuAudioWhats1" src="audio1.mp3"></audio>
 </div>
-
-<style>
-.audio-whatsapp {
-  background: #1f1f1f;
-  border-radius: 16px;
-  padding: 12px 16px;
-  max-width: 320px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 0 12px rgba(255, 0, 119, 0.3);
-  margin:60px auto;
-}
-
-.audio-play-btn {
-  background-color: #25D366;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.audio-progress-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.audio-barra {
-  height: 6px;
-  background: #333;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-#audioBarraProgressoWhats {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(to right, #25D366, #128C7E);
-  transition: width 0.1s linear;
-}
-
-#audioTempoWhats {
-  color: #ccc;
-  font-size: 13px;
-  text-align: right;
-}
-</style>
-
-<script>
-const audioWhats = document.getElementById("meuAudioWhats");
-const barraWhats = document.getElementById("audioBarraProgressoWhats");
-const tempoWhats = document.getElementById("audioTempoWhats");
-const iconeWhats = document.getElementById("iconeBotaoWhats");
-
-function tocarAudioWhats() {
-  if (audioWhats.paused) {
-    audioWhats.play();
-    iconeWhats.innerHTML = "&#10074;&#10074;";
-  } else {
-    audioWhats.pause();
-    iconeWhats.innerHTML = "&#9658;";
-  }
-}
-
-audioWhats.addEventListener("timeupdate", () => {
-  const progresso = (audioWhats.currentTime / audioWhats.duration) * 100;
-  barraWhats.style.width = progresso + "%";
-
-  // tempo formatado
-  const minutos = Math.floor(audioWhats.currentTime / 60);
-  const segundos = Math.floor(audioWhats.currentTime % 60).toString().padStart(2, '0');
-  tempoWhats.innerText = `${minutos}:${segundos}`;
-});
-
-audioWhats.addEventListener("ended", () => {
-  barraWhats.style.width = "0%";
-  iconeWhats.innerHTML = "&#9658;";
-  tempoWhats.innerText = "0:00";
-});
-</script>
-
-
 
     <!-- Remover o target="_blank" -->
 
@@ -433,6 +344,220 @@ audioWhats.addEventListener("ended", () => {
         document.getElementById("descricao-prova").innerText = imagens[i].texto;
       }, 4000); // Troca a cada 4 segundos
     </script>
+
+<div class="status-local" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+
+  <!-- Lista de benefícios -->
+
+  <section class="benefits-section">
+  <h2>O que você vai receber</h2>
+  <div class="benefits-icons">
+    <div class="benefit">
+      <img src="https://i.postimg.cc/05XrJZgH/hot-pepper-emoji-clipart-md.png" alt="Pimenta" />
+      <p>Conteúdo picante</p>
+    </div>
+    <div class="benefit">
+      <img src="https://i.postimg.cc/65sZ1RQY/no-one-under-eighteen-emoji-clipart-sm.png" alt="Vídeos exclusivos" />
+      <p>Vídeos exclusivos</p>
+    </div>
+    <div class="benefit">
+      <img src="https://i.postimg.cc/DftXSsk1/whatsapp-33.png" alt="WhatsApp Privado" />
+      <p>WhatsApp privado</p>
+    </div>
+    <div class="benefit">
+      <img src="https://i.postimg.cc/9frmP8y0/Devil-Emoji-Icon-7590c90c-e509-4534-bb4f-056c2c68c9e4-large.webp" alt="Acesso ilimitado" />
+      <p>Acesso ilimitado</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.benefits-section h2 {
+  font-size: 28px;
+  color: #ff0077;
+  margin-bottom: 30px;
+}
+
+.benefits-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  padding: 14px;
+  border: 2px solid #ff0077;
+  border-radius: 16px;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 12px rgba(255, 0, 119, 0.3);
+  transition: transform 0.3s;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 0, 119, 0.6);
+}
+
+.benefit img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 4px #ff0077aa);
+}
+
+.benefit p {
+  font-size: 16px;
+  color: #fff;
+}
+
+</style>
+
+<!-- Player 2 -->
+  <div class="audio-whatsapp">
+    <button class="audio-play-btn" onclick="tocarAudio(2)">
+      <span id="iconeBotaoWhats2">&#9658;</span>
+    </button>
+    <div class="audio-progress-container">
+      <div class="audio-barra">
+        <div id="audioBarraProgressoWhats2"></div>
+      </div>
+      <span id="audioTempoWhats2">0:00</span>
+    </div>
+    <audio id="meuAudioWhats2" src="audio2.mp3"></audio>
+  </div>
+
+<style>
+.audio-whatsapp {
+  background: #1f1f1f;
+  border-radius: 16px;
+  padding: 12px 16px;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 0 12px rgba(255, 0, 119, 0.3);
+  margin: 60px auto;
+}
+
+.audio-play-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 49px;
+  height: 48px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-progress-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.audio-barra {
+  height: 6px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.audio-barra > div {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #25D366, #128C7E);
+  transition: width 0.1s linear;
+}
+
+#audioTempoWhats1,
+#audioTempoWhats2 {
+  color: #ccc;
+  font-size: 13px;
+  text-align: right;
+}
+</style>
+
+<script>
+const players = [
+  {
+    audio: document.getElementById("meuAudioWhats1"),
+    barra: document.getElementById("audioBarraProgressoWhats1"),
+    tempo: document.getElementById("audioTempoWhats1"),
+    icone: document.getElementById("iconeBotaoWhats1")
+  },
+  {
+    audio: document.getElementById("meuAudioWhats2"),
+    barra: document.getElementById("audioBarraProgressoWhats2"),
+    tempo: document.getElementById("audioTempoWhats2"),
+    icone: document.getElementById("iconeBotaoWhats2")
+  }
+];
+
+let audioAtivo = null;
+
+function tocarAudio(index) {
+  const atual = players[index - 1];
+
+  // Pausa qualquer outro que estiver tocando
+  players.forEach((player, i) => {
+    if (i !== index - 1) {
+      player.audio.pause();
+      player.icone.innerHTML = "&#9658;";
+    }
+  });
+
+  if (atual.audio.paused) {
+    atual.audio.play();
+    atual.icone.innerHTML = "&#10074;&#10074;";
+    audioAtivo = atual.audio;
+  } else {
+    atual.audio.pause();
+    atual.icone.innerHTML = "&#9658;";
+    audioAtivo = null;
+  }
+}
+
+// Atualizações para cada player
+players.forEach((player, i) => {
+  player.audio.addEventListener("timeupdate", () => {
+    const progresso = (player.audio.currentTime / player.audio.duration) * 100;
+    player.barra.style.width = progresso + "%";
+
+    const minutos = Math.floor(player.audio.currentTime / 60);
+    const segundos = Math.floor(player.audio.currentTime % 60).toString().padStart(2, '0');
+    player.tempo.innerText = `${minutos}:${segundos}`;
+  });
+
+  player.audio.addEventListener("ended", () => {
+    player.barra.style.width = "0%";
+    player.icone.innerHTML = "&#9658;";
+    player.tempo.innerText = "0:00";
+    if (audioAtivo === player.audio) {
+      audioAtivo = null;
+    }
+  });
+});
+</script>
+
 
     <!-- Remover o target="_blank" -->
     <a href="entrar.html" class="telegram-btn">👉 <strong>Quero ter acesso ao seu WhatsApp</strong></a>
